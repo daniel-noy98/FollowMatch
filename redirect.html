@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>FollowMatch Redirect</title>
+    <script>
+      window.onload = function () {
+        const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+        if (/android/i.test(userAgent)) {
+          window.location.href = "https://play.google.com/store/apps/details?id=com.followmatch.app&pcampaignid=web_share";
+        } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+          window.location.href = "https://apps.apple.com/il/app/followmatch/id6745215703?l=he";
+        } else {
+          window.location.href = "https://followmatch.app"; // fallback אם אתה רוצה
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <p>Redirecting to the app store...</p>
+  </body>
+</html>
